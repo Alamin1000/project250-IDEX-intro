@@ -1,0 +1,220 @@
+/*-----------------------------------=========Main-Style-Sheet=========----------------------------------------*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+:root {
+  --theme__color1: #2362AE;
+  --theme__color2: #C3976A;
+  --inter: 'Inter', sans-serif;
+  --easing: cubic-bezier(0.375, 0.880, 0.505, 1.1);
+  --animation0: 2s;
+  --animation1: 0.8s;
+  --animation2: 0.7s;
+}
+*,::before,::after {
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  line-height: 1.2;
+  background-color: #fff;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  word-break: normal;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--inter);
+}
+a, a:active, a:focus, a:active, a:hover {
+  text-decoration:none !important;
+  color: inherit;
+}
+input{
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a:hover,
+a:focus,
+input:focus,
+input:hover,
+select:focus,
+select:hover,
+select:active,
+textarea:focus,
+textarea:hover,
+button:focus {
+  outline: none;
+}
+::placeholder {
+  opacity: 1;
+}
+:focus::placeholder {
+  opacity: 0;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed; /* Prevents HTML tables from becoming too wide */
+  width: 100%;
+}
+img {
+  -ms-interpolation-mode: bicubic;
+  border: 0;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+iframe {
+  width: 100%;
+}
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6{
+  font-weight: 700;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+p{
+  margin-bottom: 15px;
+}
+p:last-child{
+  margin: 0;
+}
+.main-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1236px;
+  }
+}
+
+
+
+/* ---intro-section--- */
+.intro-section {
+  padding: 31px 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  background: url('images/background.png') no-repeat center center/cover;
+  position: relative;
+  z-index: 1;
+}
+.intro-section .watermark-logo {
+  position: absolute;
+  top: 105px;
+  left: 50%;
+  transform: translate(-50%,0);
+  z-index: -1;
+}
+.intro-section-inner {
+
+}
+
+.intr-rw1-tb {
+  margin: 0 0 12px;
+  display: flex;
+}
+.intr-rw1-tb .button {
+  opacity: 0;
+  animation: enter-left-an2 var(--animation2) var(--easing) forwards calc(var(--animation0) + var(--animation1));
+}
+
+
+.intr-rw2-tl {
+  margin: 0 0 50px;
+  display: flex;
+  justify-content: center;
+}
+.intr-rw2-tl .main-logo {
+  --y-off: 270px;
+  --scale: 1.2;
+  display: flex;
+  width: 607px;
+  max-width: 100%;
+  transform: translateY(var(--y-off)) scale(var(--scale));
+  animation: main-logo-position var(--animation1) var(--easing) forwards var(--animation0);
+}
+@keyframes main-logo-position {
+  from {
+    transform: translateY(var(--y-off)) scale(var(--scale));
+  }
+  to {
+    transform: translateY(0px) scale(1);
+  }
+}
+.intr-rw2-tl .main-logo img {
+
+}
+
+.intr-rw3-fr {
+  margin: 0 0 30px;
+  padding: 18px 0;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  animation: fade-in-an1 var(--animation1) var(--easing) forwards var(--animation0);
+  opacity: 0;
+}
+.intr-rw3-fr::after {
+  content: '';
+  height: 100%;
+  width: 5000px;
+  background: var(--theme__color2);
+  position: absolute;
+  display: block;
+  top: 0;
+  left: -2200px;
+  z-index: -1;
+}
+.intr-rw3-fr h4 {
+  font-size: 24px;
+  text-align: center;
+}
+
+.intr-rw4-bc {
+  --inner-space: 24px;
+  --bt-space: var(--inner-space);
+  --item: 2;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 calc(var(--inner-space) * -0.5) calc(var(--bt-space) * -1 );
+  justify-content: center;
+}
+.intr-rw4-bc .intr-card-single {
+  width: calc((100% / var(--item)) - var(--inner-space));
+  margin: 0  calc(var(--inner-space) * 0.5) var(--bt-space);
+}
+.intr-card-single {
+
+}
+.intr-card-single .title {
+  margin: 0 0 11px;
+  text-align: center;
+}
+.intr-card-single .title h4 {
+  font-size: 20px;
+  color: var(--theme__color1);
+}
+.intr-card-single .card-image {
+  background: #FFFBF8;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+}
+.intr-card-single .card-image .img {
+  width: 100%;
+  border-radius: inherit;
+}
+.intr-rw4-bc .intr-card-single.card1 {
+  animation: enter-right-an2 var(--animation2) var(--easing) forwards calc(var(--animation0) + var(--animation1));
+  opacity: 0;
+}
+.intr-rw4-bc .intr-card-single.card2 {
+  animation: enter-left-an2 var(--animation2) var(--easing) forwards calc(var(--animation0) + var(--animation1));
+  opacity: 0;
+}
+
+/* ---intro-section---end */

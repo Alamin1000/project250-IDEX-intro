@@ -1,0 +1,138 @@
+
+
+@media (max-width: 1399px) {
+    .intr-rw2-tl .main-logo {
+        width: 530px;
+        --y-off: 190px;
+    }
+    .default-button {
+        font-size: 16px;
+        padding: 16px 30px;
+    }
+    .intr-rw2-tl {
+        margin: 0 0 35px;
+    }
+
+
+    .intr-rw3-fr h4 {
+        font-size: 16px;
+    }
+    .intr-rw3-fr {
+        margin: 0 0 20px;
+        padding: 15px 0;
+    }
+
+    .intr-card-single .title h4 {
+        font-size: 16px;
+    }
+
+}
+
+
+@media (max-width: 1199px) {
+ 
+}
+
+
+@media (max-width: 991px) {
+    .intr-rw2-tl .main-logo {
+        width: 400px;
+        --y-off: 120px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .intro-section .watermark-logo {
+        max-width: 123%;
+        animation: fade-in-an1 var(--animation1) var(--easing) forwards var(--animation0);
+        opacity: 0;
+    }
+    .intr-rw2-tl .main-logo {
+        width: 400px;
+        --y-off: 320px;
+        padding: 0 4%;
+        --scale: 1.05;
+    }
+    .intr-rw4-bc {
+        --inner-space: 17px;
+        --item: 1;
+    }
+    .intr-card-single {
+        display: flex;
+        flex-direction: column;
+    }
+    .intr-card-single .title {
+        margin: 11px 0 0px;
+        order: 2;
+    }
+    .mobile-bottom-button {
+        margin: 20px 0 0;
+    }
+    .mobile-bottom-button .button {
+        opacity: 0;
+        animation: enter-right-an2 var(--animation2) var(--easing) forwards calc(var(--animation0) + var(--animation1));
+    }
+    
+}
+
+
+@media (max-width: 575px) {
+ 
+}
+
+
+@media (max-width: 460px) {
+    .intro-section .watermark-logo {
+        display: none;
+    }
+    .intro-section {
+        background: url('../images/mobile-background.png') no-repeat center center/100% 100%;
+        position: relative;
+        z-index: 1;
+    }
+    .intro-section::after {
+        content: '';
+        height: 100%;
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: url('../images/mobile-background2nd.png') no-repeat center center/100% 100%;
+        opacity: 0;
+        animation: intro-sec-mbl-anm var(--animation1) var(--easing) forwards var(--animation0);
+    }
+    @keyframes intro-sec-mbl-anm {
+        from {
+           opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+@media (max-width: 370px) {
+    .intr-rw2-tl .main-logo {
+        --y-off: 220px;
+    }
+    .intro-section {
+        padding: 20px 0;
+    }
+    .intr-rw2-tl {
+        margin: 0 0 20px;
+    }
+    .mobile-bottom-button {
+        margin: 12px 0 0;
+    }
+    .intr-rw4-bc {
+        --inner-space: 10px;
+        --item: 1;
+    }
+    .intr-rw3-fr {
+        margin: 0 0 15px;
+        padding: 13px 0;
+    }
+}
